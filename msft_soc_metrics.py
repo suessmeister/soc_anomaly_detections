@@ -21,6 +21,7 @@ Ethan Wen (ISO) - 2/19/2024
 
 """## 1. Load Data and Examine the Different Headers/Categories"""
 
+from IPython import display
 import pandas as pd
 raw_incidents = pd.read_excel("incidents_jan_2024.xlsx")
 
