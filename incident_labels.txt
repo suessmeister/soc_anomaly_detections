@@ -1,0 +1,65 @@
+Email reported by user as malware or phish involving one user
+Email reported by user as malware or phish involving multiple users
+Email reported by user as malware or phish
+Email reported by user as junk involving one user
+Initial access incident involving multiple users
+Email reported by user as junk
+Exfiltration incident involving one user
+Account enumeration reconnaissance involving multiple users
+Suspected brute-force attack (Kerberos, NTLM) on one endpoint
+Multiple failed login attempts involving one user
+Cloud Discovery anomaly detection
+Messages containing malicious entity not removed after delivery
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (FW: Claim 23T01K666891 for Laura Brewer -DOI 05-10-23) involving one user
+Horizontal port scan initiated on one endpoint
+Mass delete involving one user
+Email reported by user as not junk
+Impossible travel activity involving one user
+Data exfiltration to an app that is not sanctioned
+Shared file externally
+A potentially malicious URL click was detected
+File containing PCI detected in the cloud (built-in DLP engine) involving one user
+DLP policy (PCI Data Security Standard (PCI DSS)) matched for document (2023-2024 November Reconciliation.xlsx) in SharePoint
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (Boone 2021 Tax Info.docx) in a device
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (2021 Tax Stuff)
+DLP policy (PCI Data Security Standard (PCI DSS)) matched for document (New_Unsaved_Query_1237.xlsx) in OneDrive
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (RE: TRS/ORP Eligibility - Respond by April 7, 2024) involving one user
+Multi-stage incident involving Collection & Exfiltration involving one user
+Persistence incident on multiple endpoints reported by multiple sources
+Multi-stage incident involving Initial access & Command and control on one endpoint reported by multiple sources
+DLP policy (U.S. PCI Data Security Standard (PCI DSS)) matched for document (Anthony Travel Profile -Antonia Jones.docx) in a device
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (Re: FA PRP)
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (2023_W2_Miriam_StDavidsHCA.pdf) in a device
+DLP policy (UT System Internal SSN Policy) matched for document (bbchargeload_report-2204.csv) in OneDrive
+Storm-0878 activity group on one endpoint
+Suspicious Power BI report sharing involving one user
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (pif-James-Peppers-PLA31-24.pdf) in a device
+DLP policy (UT System Internal SSN Policy) matched for document (2402 UTBB_Data Fixes.xlsx) in OneDrive
+DLP policy (UT System Internal SSN Policy) matched for document (BF_HRIS_PROCESS_REPORT_01.15.24.csv) in OneDrive involving one user
+DLP policy (UT System Internal SSN Policy) matched for document (OneDrive_1_1-17-2024.zip) in OneDrive
+Malware detection involving one user
+Used an anonymous link
+An active 'RedLine' malware in an MSIL code was prevented from executing via AMSI on one endpoint
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (GARRETT-23-B06.pdf) in a device
+File containing privacy PII in the cloud (built with DCS) involving one user
+Exfiltration incident on one endpoint
+Suspicious additions to sensitive groups on multiple endpoints
+Suspicious activity incident
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (Employee_Census_Report_01_11_2024_01_14_PM (1).csv) in a device
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (Employee_Census_Report_01_11_2024_01_14_PM (1).csv) in a device on one endpoint
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (TRANSCRIPT_FROM-00366100_1703877902541_20231229__66361992_T.pdf) in a device
+Outbound vertical port scan on one endpoint
+Mass download involving one user
+Suspicious scheduled task on one endpoint
+DLP policy (UT System Internal SSN Policy) matched for document (UTZHB149_DATA.xlsx) in OneDrive
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (RE: HOLA Affinity Group 1.9.23) involving one user
+Initial access incident involving one user
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (RE: Galvanic Energy 2023 tax documents)
+Account enumeration reconnaissance on one endpoint
+DLP policy (U.S. Personally Identifiable Information (PII) - Exchange email) matched for email with subject (Homer Simpson)
+Exfiltration incident involving multiple users
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (OneDrive_2024-01-04 (15).zip) in a device
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (OneDrive_2024-01-04 (11).zip) in a device
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (OneDrive_2024-01-04 (8).zip) in a device
+DLP policy (U.S. Personally Identifiable Information (PII)) matched for document (OneDrive_2024-01-04 (3).zip) in a device
+DLP policy (UT System Internal SSN Policy) matched for document (2023 OEB Expense Calc for Box 12DD.xlsx) in OneDrive

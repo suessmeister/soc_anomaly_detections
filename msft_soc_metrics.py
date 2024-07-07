@@ -50,26 +50,27 @@ DLP_incidents = []
 for incident in lst_incidents:
     if 'DLP' in incident:
         DLP_incidents.append(incident)
-del lst_incidents
+
+
 # splitting up some of the lists so as to get a distinction in DLP incidents, maybe match email, document, cloud, or number of users
 PII_DLP_incidents = []
 PCI_DSS_incidents = []
 leftover_incidents = []
 for incident in DLP_incidents:
-    if 'PII' in incident:
-        PII_DLP_incidents.append(incident)
-    elif 'SSN' in incident:
+    if 'PII' or 'SSN' in incident:
         PII_DLP_incidents.append(incident)
     elif 'PCI' in incident:
         PCI_DSS_incidents.append(incident)
     else:
         leftover_incidents.append(incident)
-del DLP_incidents
+
+
 # print(f'PII: {PII_DLP_incidents}\n')
 print(f'PCI: {PCI_DSS_incidents}\n')
 # print(f'leftovers: {leftover_incidents}')
 # no leftovers now so we can continue to categorize
-del leftover_incidents
+
+
 email_PII_DLP = []
 doc_PII_DLP = []
 leftover_PII_DLP = []
