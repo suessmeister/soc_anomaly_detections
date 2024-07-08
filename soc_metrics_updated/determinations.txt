@@ -1,0 +1,18 @@
+Multi staged attack
+Malware
+Malicious user activity
+Unwanted software
+Phishing
+Compromised account
+Other
+
+Security testing
+Confirmed activity
+Line of business application
+Other
+
+Not malicious
+Not enough data to validate
+Other
+
+Not set
