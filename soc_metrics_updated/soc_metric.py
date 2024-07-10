@@ -3,7 +3,6 @@ import numpy as np
 import incident
 import cfg
 
-
 raw_incidents = pd.read_excel("incidents_jan_2024.xlsx")
 processed_incidents = []
 
@@ -17,10 +16,6 @@ for index, raw_incident in raw_incidents.iterrows():
                                            df_array[15], df_array[16],
                                            threat_index=0)
 
-    processed_incident.calculate_threat_index()
     print(processed_incident.threat_index)
 
     break
-
-
-
