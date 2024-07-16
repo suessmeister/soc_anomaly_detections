@@ -91,11 +91,22 @@ def create_model():
     # plt.show()
     # return 0
 
+def better_model():
 
+    # in the previous model, we do NOT vectorize the name of the incident.
+    # however, this could yield some very powerful results and give us specific anomalies.
+
+    # consider a vector space in the R3 space.
+    # a vector representation of an incident could have the tokenized name on the x,
+    # accounts impacted on the y,
+    # and finally the severity on the z.
+    # the total magnitude of this vector will yield far better results.
+    return 0
 def main():
     create_incidents()
     preprocess_data()
-    create_model()
+    # create_model()
+    better_model()
 
 
 main()

@@ -16,7 +16,8 @@ class Incident:
     def return_raw_data(self):
         return [
             self.severity,
-            self.impact
+            self.impact,
+            self.name
         ]
 
     def __str__(self):
