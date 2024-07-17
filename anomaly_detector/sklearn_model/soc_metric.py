@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import incident
-import cfg
 
 # Preprocess the data, converting strings to integers and scaling for optimizations.
 from sklearn.preprocessing import LabelEncoder, StandardScaler
@@ -158,7 +157,11 @@ def better_model():
     updated_df = pd.DataFrame(final_vector.T.todense(), index=feature_names, columns=["tfidf"])
     updated_df.sort_values(ascending=False, by=["tfidf"])
 
+    model = LocalOutlierFactor()
+    predictions = model.fit_predict(updated_df)
     print(updated_df.to_string())
+    print(predictions)
+    print(model.negative_outlier_factor_)
 
 def main():
     create_incidents()
