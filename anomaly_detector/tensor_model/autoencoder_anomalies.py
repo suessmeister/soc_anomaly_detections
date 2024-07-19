@@ -8,8 +8,9 @@ from nltk.corpus import stopwords # for getting rid of the stopwords AKA words t
 
 
 
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer # assign tfidf scores in the model
 from sklearn.model_selection import train_test_split # splitting the data accordingly
+from sklearn.neighbors import LocalOutlierFactor
 
 # Data Preprocessing - Making this data usable
 
@@ -36,16 +37,32 @@ stop_words = set(stopwords.words('english')) # get the stopwords for the english
 # import nltk
 # nltk.download('stopwords')
 
-def clean_stopwords(token_list):
-    new_tokens = []
+def clean_stopwords(token_list): # getting rid of stopwords while also getting rid of tokens that start with numbers
+    new_tokens = ""
     for token in token_list:
-        if token not in stop_words: new_tokens.append(token)
+        if token not in stop_words and (not token[0].isdigit() if token else True):
+            new_tokens = new_tokens + " " + token
     return new_tokens
 
 
 # clean out words that do not contribute to the model
 updated_data['No Stopwords'] = updated_data['Tokenized Names'].apply(lambda tokens: clean_stopwords(tokens))
 
+
+vectorizer = TfidfVectorizer()
+fitted_X = vectorizer.fit_transform(updated_data['No Stopwords']) # Learn and Vocab AND Return IDF scores
+print(vectorizer.get_feature_names_out())
+print(vectorizer.idf_)
+
+# X_train, X_test = train_test_split(fitted_X, test_size=0.15)
+
+model = LocalOutlierFactor()
+
+model.fit(fitted_X)
+
+outlier_scores = model.negative_outlier_factor_
+
+updated_data['Outlier Scores'] = outlier_scores
 
 
 print(tabulate(updated_data, headers='keys', tablefmt='psql')) # shoutout to tabulate for such a lightweight tool!
