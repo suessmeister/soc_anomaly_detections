@@ -34,7 +34,7 @@ def create_incidents():
 
 # Tokenizing the data. Used in lambda function call.
 def tokenizer(str):
-    tokens = re.split("\W+", str)
+    tokens = re.split(r"\W+", str)
     return tokens
 
 
@@ -81,6 +81,7 @@ updated_data['Outlier Scores'] = outlier_scores  # outliers further away from -1
 updated_data = updated_data.sort_values('Outlier Scores')  # descending order!
 
 
+
 # Incident Matching or Data Preparation for Visualizations
 
 # incidents now contains each incident in chronological order
@@ -89,5 +90,15 @@ test = updated_data.at[1, 'Raw Names']
 print(updated_data.index)
 print(test)
 
+import matplotlib.pyplot as plt
 
-# print(tabulate(updated_data.head(), headers='keys', tablefmt='psql'))  # shoutout to tabulate for such a lightweight tool!
+# Assuming you want to plot the outlier scores against the indices (row numbers)
+indices = updated_data.index
+outlier_scores = updated_data['Outlier Scores']
+
+
+
+
+
+
+print(tabulate(updated_data, headers='keys', tablefmt='psql'))  # shoutout to tabulate for such a lightweight tool!
