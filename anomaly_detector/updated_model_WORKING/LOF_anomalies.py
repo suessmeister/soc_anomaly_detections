@@ -61,7 +61,7 @@ updated_data['Outlier Scores'] = outlier_scores # outliers further away from -1 
 updated_data = updated_data.sort_values('Outlier Scores') # descending order!
 
 
-print(tabulate(updated_data.head(), headers='keys', tablefmt='psql')) # shoutout to tabulate for such a lightweight tool!
+print(tabulate(updated_data, headers='keys', tablefmt='psql')) # shoutout to tabulate for such a lightweight tool!
 
 
 
