@@ -3,14 +3,13 @@
 # data preprocessing imports required
 from tabulate import tabulate # for visualizing the pandas dataframe better. ipython can also be used?
 import pandas as pd # for dataframe objects
-import re # regular expression operations for strings.. used to tokenize the words without using vectors.
+import re # regular expression operations for strings. used to tokenize the words without using vectors.
 from nltk.corpus import stopwords # for getting rid of the stopwords AKA words that are not needed for the model
 
 
 
 from sklearn.feature_extraction.text import TfidfVectorizer # assign tfidf scores in the model
-from sklearn.model_selection import train_test_split # splitting the data accordingly
-from sklearn.neighbors import LocalOutlierFactor
+from sklearn.neighbors import LocalOutlierFactor # the machine learning model to use. this is unsupervised learning.
 
 # Data Preprocessing - Making this data usable
 
@@ -50,22 +49,19 @@ updated_data['No Stopwords'] = updated_data['Tokenized Names'].apply(lambda toke
 
 
 vectorizer = TfidfVectorizer()
-fitted_X = vectorizer.fit_transform(updated_data['No Stopwords']) # Learn and Vocab AND Return IDF scores
-print(vectorizer.get_feature_names_out())
-print(vectorizer.idf_)
+fitted_X = vectorizer.fit_transform(updated_data['No Stopwords']) # learn the vocab and IDF scores
+# print(vectorizer.get_feature_names_out())
+# print(vectorizer.idf_)
 
-# X_train, X_test = train_test_split(fitted_X, test_size=0.15)
 
 model = LocalOutlierFactor()
-
-model.fit(fitted_X)
-
-outlier_scores = model.negative_outlier_factor_
-
-updated_data['Outlier Scores'] = outlier_scores
+model.fit(fitted_X) # fit the model on the given data
+outlier_scores = model.negative_outlier_factor_ # find local outliers. -1 is a constant value and indicates an inlier
+updated_data['Outlier Scores'] = outlier_scores # outliers further away from -1 are more likely to be outliers.
+updated_data = updated_data.sort_values('Outlier Scores') # descending order!
 
 
-print(tabulate(updated_data, headers='keys', tablefmt='psql')) # shoutout to tabulate for such a lightweight tool!
+print(tabulate(updated_data.head(), headers='keys', tablefmt='psql')) # shoutout to tabulate for such a lightweight tool!
 
 
 
