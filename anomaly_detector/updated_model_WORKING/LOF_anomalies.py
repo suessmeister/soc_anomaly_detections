@@ -85,9 +85,8 @@ updated_data = updated_data.sort_values('Outlier Scores')  # descending order!
 
 # incidents now contains each incident in chronological order
 incidents = create_incidents()
-test = updated_data.at[1, 'Raw Names']
-print(updated_data.index)
-print(test)
+
+
 
 
 # print(tabulate(updated_data.head(), headers='keys', tablefmt='psql'))  # shoutout to tabulate for such a lightweight tool!
