@@ -52,6 +52,8 @@ def clean_stopwords(token_list):  # getting rid of stopwords while also getting 
 
 names = raw_data.iloc[:, 0]  # get only the incident names for the dataframe
 
+print(names.to_string())
+
 updated_data = pd.DataFrame()
 updated_data['Raw Names'] = names  # add a column to this DataFrame storing the initial names. needs to be string.
 updated_data['Lowercase Names'] = updated_data['Raw Names'].apply(lambda word: word.lower())  # make lowercase column.
