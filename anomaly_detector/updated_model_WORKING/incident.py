@@ -1,5 +1,6 @@
 # defining the blueprint for creating an incident object, i.e. one row in the excel sheet.
 # has different methods depending on current and/or future needs
+# also contains functions to modify
 class Incident:
     def __init__(self, name, id, severity, accounts_reached, impact, classification, determination, threat_index):
         self.name = name
@@ -19,6 +20,7 @@ class Incident:
             self.impact,
             self.name
         ]
+
 
     def __str__(self):
         return (f"incident {self.name} with id {self.id} and severity {self.severity} and impact {self.impact}"

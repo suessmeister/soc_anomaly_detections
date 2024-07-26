@@ -52,7 +52,7 @@ def clean_stopwords(token_list):  # getting rid of stopwords while also getting 
 
 names = raw_data.iloc[:, 0]  # get only the incident names for the dataframe
 
-print(names.to_string())
+# print(names.to_string())
 
 updated_data = pd.DataFrame()
 updated_data['Raw Names'] = names  # add a column to this DataFrame storing the initial names. needs to be string.
@@ -96,9 +96,6 @@ import matplotlib.pyplot as plt
 # Assuming you want to plot the outlier scores against the indices (row numbers)
 indices = updated_data.index
 outlier_scores = updated_data['Outlier Scores']
-
-
-
 
 
 
