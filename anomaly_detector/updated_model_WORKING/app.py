@@ -8,6 +8,7 @@ app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 nth_anomalies = updated_data.head()
 updated_data = updated_data.astype(str)
+updated_data = updated_data[['ID', 'Raw Names', 'No Stopwords']]
 
 # testing whether the 100th element of the list is proper
 # subtract 2 to account for the difference in the csv to the proper location.
@@ -58,6 +59,11 @@ app.layout = dbc.Container([
     test_table := dash_table.DataTable(
         id='table',
         data=updated_data.to_dict('records'),
+        style_data={
+            'width': '150px', 'minWidth': '150px', 'maxWidth': '150px',
+            'overflow': 'hidden',
+            'textOverflow': 'ellipsis'
+        }
     )
 ])
 

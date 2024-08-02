@@ -13,7 +13,7 @@ from sklearn.neighbors import LocalOutlierFactor  # the machine learning model t
 # Data Preprocessing - Making this data usable
 
 
-raw_data = pd.read_excel("../incidents_jan_2024.xlsx")  # 758 "rows" or incidents and 18 categorical columns
+raw_data = pd.read_excel("../incidents_july_2024.xlsx")  # 758 "rows" or incidents and 18 categorical columns
 
 # Defining the proper functions while also instantiating from the Incident Class.
 def create_incidents():
@@ -84,13 +84,21 @@ updated_data = updated_data.sort_values('Outlier Scores')  # descending order!
 
 
 
+
+
 # Incident Matching or Data Preparation for Visualizations
 
 # incidents now contains each incident in chronological order
 incidents = create_incidents()
 
+def append_id():
+    ids = []
+    for incident in incidents:
+        ids.append(incident.id)
 
+    return ids
 
+updated_data['ID'] = append_id()
 import matplotlib.pyplot as plt
 
 # Assuming you want to plot the outlier scores against the indices (row numbers)
